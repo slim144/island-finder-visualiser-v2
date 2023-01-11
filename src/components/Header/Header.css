@@ -1,0 +1,80 @@
+.body-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 15px;
+}
+
+.legends {
+  display: flex;
+  margin: 15px;
+  font-weight: 600;
+  align-items: center;
+}
+
+.legend-content {
+  display: flex;
+  margin: 0 15px;
+}
+
+.legend-icon {
+  height: 25px;
+  width: 25px;
+  border: 1px solid rgb(60, 93, 122);
+  margin-right: 3px;
+}
+
+.legend-icon-water {
+  background-color: rgb(255, 255, 255);
+}
+
+.legend-icon-land {
+  background-color: rgb(35, 49, 66);
+}
+
+.legend-icon-search-point {
+  background: url(../../../public/images/binoculars.svg);
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.legend-icon-sea-found {
+  background-color: rgba(0, 190, 218, 0.75);
+}
+
+.legend-icon-land-found {
+  background-color: rgba(131, 88, 11, 0.6);
+}
+
+.legend-icon-island-found {
+  background-color: rgba(64, 42, 35, 1);
+}
+
+.legend-description {
+  min-width: 50px;
+  margin: auto 7px;
+  text-align: left;
+}
+
+.body-content h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 15px;
+}
+
+.body-content b {
+  font-weight: 700;
+}
+
+.grid-description {
+  display: flex;
+}
+
+.grid-description p {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,169 @@
+.tutorial-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 40px;
+  overflow-y: auto;
+  height: 85%;
+}
+
+.tutorial-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.tutorial-title h1 {
+  color: rgb(35, 49, 66);
+  font-size: 3rem;
+  font-size: 700;
+}
+
+.tutorial-title img {
+  height: 70px;
+  width: 70px;
+  margin-right: 20px;
+}
+
+.tutorial-container {
+  flex-grow: 1;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.tutorial-text {
+  text-align: start;
+  font-size: 1.2rem;
+  padding: 5px 0;
+}
+
+.page-1-text {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 100px 0;
+}
+
+.grid-size-label,
+.search-pattern-label,
+.generate-random-land-label,
+.search-island-label,
+.clear-board-label,
+.reset-label {
+  background-color: transparent;
+  border-radius: 6px;
+  color: rgb(35, 49, 66);
+  border: 2px solid rgb(35, 49, 66);
+  text-decoration: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.2rem 0.8rem;
+  margin: 0 0.4rem;
+}
+
+.reset-label {
+  color: rgb(188, 37, 37);
+  border: 2px solid rgb(188, 37, 37);
+}
+
+.color-label {
+  color: rgb(35, 49, 66);
+}
+
+.gridsize-img,
+.searchpattern-img {
+  margin-top: 20px;
+}
+
+.searchpoint-img {
+  transform: translate(0, 4px);
+  margin: 0 5px;
+}
+
+.searchpoint-gif,
+.search-island-gif,
+.reset-gif {
+  margin: 60px 0;
+}
+
+.search-island-gif,
+.reset-gif {
+  width: 100%;
+}
+
+.land-gif-container {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 40px;
+}
+
+.tutorial-btn-group {
+  display: flex;
+  position: relative;
+  position: absolute;
+  top: 90%;
+}
+
+.page-number {
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background-color: #fff;
+  border: 1px solid rgb(35, 49, 66);
+  color: rgb(35, 49, 66);
+  border-right: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.page-arrow {
+  background-color: rgba(255, 255, 255, 1);
+  width: 70px;
+  height: 40px;
+  font-size: 1.3rem;
+  outline: none;
+  border: 1px solid rgb(35, 49, 66);
+  color: rgb(35, 49, 66);
+  cursor: pointer;
+}
+
+.page-arrow:hover,
+.page-number:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.page-number.active {
+  color: #fff;
+  background-color: rgb(35, 49, 66);
+}
+
+.page-arrow:disabled {
+  cursor: default;
+  color: rgb(108, 117, 125);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.page-arrow.left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 50px 0 0 50px;
+  border-right: none;
+}
+
+.page-arrow.right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-radius: 0 50px 50px 0;
+}
+
+.tutorial-btn-group .fa-chevron-right,
+.fa-chevron-left {
+  transform: translate(0, 2px);
+  margin: 20px;
+}

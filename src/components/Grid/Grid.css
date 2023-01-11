@@ -1,0 +1,116 @@
+.body-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-grid {
+  background-color: #fff;
+  border-collapse: collapse;
+}
+
+.node-grid {
+  border: 1px solid rgb(69, 93, 122);
+  width: calc(95vw / 70);
+  height: calc(95vw / 70);
+  padding: 0;
+}
+
+.land-node {
+  background-color: rgb(35, 49, 66);
+}
+
+.sea-node {
+  background-color: #fff;
+}
+
+.sea-found {
+  animation: 1.5s ease-out waterAnimation alternate forwards;
+}
+
+@keyframes waterAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(0, 0, 66, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: rgba(17, 104, 217, 0.75);
+  }
+
+  75% {
+    transform: scale(1.1);
+    background-color: rgba(0, 217, 159, 0.75);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(0, 190, 218, 0.75);
+  }
+}
+
+.land-found {
+  animation: 1.5s ease-out landAnimation alternate forwards;
+}
+
+@keyframes landAnimation {
+  0% {
+    transform: scale(0.6);
+    background-color: rgb(253, 233, 148);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: rgba(217, 182, 80);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(131, 88, 11, 0.6);
+  }
+}
+
+.island-found {
+  animation: 1.5s ease-out islandAnimation alternate forwards;
+}
+
+@keyframes islandAnimation {
+  0% {
+    transform: scale(0.6);
+    background-color: rgba(165, 82, 51, 1);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: rgba(29, 23, 22, 1);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(64, 42, 35, 1);
+    border: 1px solid rgba(64, 42, 35, 1);
+  }
+}
+
+.search-point-svg {
+  display: block;
+  margin: auto;
+  animation: 1.5s linear searchPointAnimation alternate;
+  cursor: pointer;
+}
+
+@keyframes searchPointAnimation {
+  0% {
+    transform: scale(0.2);
+    background-color: transparent;
+  }
+  60% {
+    transform: scale(1.4);
+    background-color: transparent;
+  }
+  100% {
+    transform: scale(1);
+    background-color: transparent;
+  }
+}
