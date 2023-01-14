@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/island-finder-visualiser-v2/static/css/main.bb44ff35.css",
+    "main.js": "/island-finder-visualiser-v2/static/js/main.c675236a.js",
+    "static/media/modal-background.jpg": "/island-finder-visualiser-v2/static/media/modal-background.e06fe96bba61166501a9.jpg",
+    "static/media/binoculars.svg": "/island-finder-visualiser-v2/static/media/binoculars.7ab5c1941953e6bd5eea.svg",
+    "index.html": "/island-finder-visualiser-v2/index.html",
+    "main.bb44ff35.css.map": "/island-finder-visualiser-v2/static/css/main.bb44ff35.css.map",
+    "main.c675236a.js.map": "/island-finder-visualiser-v2/static/js/main.c675236a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb44ff35.css",
+    "static/js/main.c675236a.js"
+  ]
+}
