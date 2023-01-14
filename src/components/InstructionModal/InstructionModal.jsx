@@ -3,6 +3,10 @@ import Card from "./Card";
 import AboutPage from "./AboutPage/AboutPage.jsx";
 import InspirationPage from "./InspirationPage/InspirationPage";
 import TutorialPage from "./TutorialPage/TutorialPage.jsx";
+import inspirationIcon from "../../assets/inspiration.svg";
+import aboutIcon from "../../assets/about.svg";
+import tutorialIcon from "../../assets/tutorial.svg";
+import appIcon from "../../assets/navLogo.png";
 
 import "./InstructionModal.css";
 
@@ -18,17 +22,17 @@ function InstructionModal({ setInstructionModalOpen }) {
     {
       title: "Inspiration",
       description: "The inspiration and thought process behind this project",
-      imgURL: "../images/inspiration.svg",
+      imgURL: inspirationIcon,
     },
     {
       title: "About",
       description: "Short summary and details about this project",
-      imgURL: "../images/about.svg",
+      imgURL: aboutIcon,
     },
     {
       title: "Tutorial",
       description: "Walkthrough all the features of this application",
-      imgURL: "../images/tutorial.svg",
+      imgURL: tutorialIcon,
     },
   ];
 
@@ -93,11 +97,7 @@ function InstructionModal({ setInstructionModalOpen }) {
         {mainPageOpen && (
           <div className="main-page">
             <div className="main-title">
-              <img
-                src="./images/navLogo.png"
-                alt="Logo"
-                className="main-page-logo"
-              />
+              <img src={appIcon} alt="Logo" className="main-page-logo" />
               Welcome to Island Finder
             </div>
             <h2 className="main-text">

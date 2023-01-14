@@ -1,4 +1,5 @@
 import React from "react";
+import inspirationIcon from "../../../assets/inspiration.svg";
 import "./InspirationPage.css";
 
 function InspirationPage() {
@@ -13,7 +14,7 @@ function InspirationPage() {
   return (
     <div className="inspiration-page">
       <div className="inspiration-title">
-        <img src="./images/inspiration.svg" alt="lightbulb img" />
+        <img src={inspirationIcon} alt="lightbulb img" />
         <h1>Inspiration</h1>
       </div>
       <p className="inspiration-text">

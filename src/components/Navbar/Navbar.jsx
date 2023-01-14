@@ -3,6 +3,7 @@ import { useRef } from "react";
 import Button from "./Button";
 import Dropdown from "./Dropdown";
 import "./Navbar.css";
+import navbarLogo from "../../assets/navLogo.png";
 
 function Navbar({
   instructionModalOpen,
@@ -50,11 +51,7 @@ function Navbar({
     <>
       <nav className="navbar">
         <a href="/" className="navbar-logo">
-          <img
-            src="./images/navLogo.png"
-            alt="Logo"
-            className="navbar-logo-img"
-          />
+          <img src={navbarLogo} alt="Logo" className="navbar-logo-img" />
           ISLAND FINDER
         </a>
         <ul className="nav-menu">

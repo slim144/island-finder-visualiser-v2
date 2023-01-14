@@ -1,4 +1,5 @@
 import React from "react";
+import searchIslandGIF from "../../../assets/searchisland.gif";
 
 function Page8() {
   return (
@@ -16,7 +17,7 @@ function Page8() {
 
       <img
         className="search-island-gif"
-        src="../images/searchisland.gif"
+        src={searchIslandGIF}
         alt="search island gif"
       />
       <div className="tutorial-text">

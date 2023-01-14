@@ -1,11 +1,12 @@
 import React from "react";
+import aboutIcon from "../../../assets/about.svg";
 import "./AboutPage.css";
 
 function AboutPage() {
   return (
     <div className="about-page">
       <div className="about-title">
-        <img src="./images/about.svg" alt="about img" />
+        <img src={aboutIcon} alt="about img" />
         <h1>About</h1>
       </div>
       <p className="about-text">

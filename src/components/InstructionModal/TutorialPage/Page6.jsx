@@ -1,4 +1,5 @@
 import React from "react";
+import searchSpeedGIF from "../../../assets/searchspeed.gif";
 
 function Page6() {
   return (
@@ -18,7 +19,7 @@ function Page6() {
 
       <img
         className="search-speed-gif"
-        src="../images/searchspeed.gif"
+        src={searchSpeedGIF}
         alt="search speed gif"
       />
       <div className="tutorial-text">

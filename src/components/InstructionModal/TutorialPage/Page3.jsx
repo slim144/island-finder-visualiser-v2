@@ -1,4 +1,5 @@
 import React from "react";
+import searchPatternImage from "../../../assets/searchpattern.PNG";
 
 function Page3() {
   return (
@@ -31,7 +32,7 @@ function Page3() {
       </div>
       <img
         className="searchpattern-img"
-        src="../images/searchpattern.PNG"
+        src={searchPatternImage}
         alt="grid size png"
       />
     </>

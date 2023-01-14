@@ -1,4 +1,5 @@
 import React from "react";
+import gridSizeImage from "../../../assets/gridsize.PNG";
 
 function Page2() {
   return (
@@ -25,11 +26,7 @@ function Page2() {
         drop-down list to change the grid size.
       </div>
 
-      <img
-        className="gridsize-img"
-        src="../images/gridsize.PNG"
-        alt="grid size png"
-      />
+      <img className="gridsize-img" src={gridSizeImage} alt="grid size png" />
     </>
   );
 }

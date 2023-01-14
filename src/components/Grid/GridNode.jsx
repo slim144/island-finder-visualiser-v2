@@ -1,4 +1,5 @@
 import React from "react";
+import searchPointIcon from "../../assets/binoculars.svg";
 
 function GridNode({ node, id, onMouseDown, onMouseUp, onMouseEnter }) {
   const { isLand, isAnimate, isSearchPoint, isVisited, animateIsland } = node;
@@ -25,7 +26,7 @@ function GridNode({ node, id, onMouseDown, onMouseUp, onMouseEnter }) {
     >
       {isSearchPoint && !isVisited && (
         <img
-          src="./images/binoculars.svg"
+          src={searchPointIcon}
           alt={"search point Img"}
           className={"search-point-svg"}
         />

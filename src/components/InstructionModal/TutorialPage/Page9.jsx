@@ -1,4 +1,5 @@
 import React from "react";
+import resetGIF from "../../../assets/reset.gif";
 
 function Page9() {
   return (
@@ -10,10 +11,10 @@ function Page9() {
         Once the visualiser has completed, you may choose to reset the grid by
         clickling <button className="reset-label">Reset</button> at the middle
         of the Navigation Bar or click{" "}
-        <button className="clear-board-label">Clear Board</button> at end of the
+        <button className="clear-board-label">Clear Grid</button> at end of the
         Navigation bar.
       </div>
-      <img className="reset-gif" src="../images/reset.gif" alt="reset gif" />
+      <img className="reset-gif" src={resetGIF} alt="reset gif" />
       <div className="tutorial-text">
         <i>
           Note:{" "}

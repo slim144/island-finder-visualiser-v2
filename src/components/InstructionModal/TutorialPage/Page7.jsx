@@ -1,4 +1,6 @@
 import React from "react";
+import landClickGIF from "../../../assets/landclick.gif";
+import landDragGIF from "../../../assets/landdrag.gif";
 
 function Page7() {
   return (
@@ -15,16 +17,8 @@ function Page7() {
         the given grid.
       </div>
       <div className="land-gif-container">
-        <img
-          className="land-gif"
-          src="../images/landclick.gif"
-          alt="land click gif"
-        />
-        <img
-          className="land-gif"
-          src="../images/landdrag.gif"
-          alt="land drag gif"
-        />
+        <img className="land-gif" src={landClickGIF} alt="land click gif" />
+        <img className="land-gif" src={landDragGIF} alt="land drag gif" />
       </div>
       <div className="tutorial-text">
         Or simply click{" "}
