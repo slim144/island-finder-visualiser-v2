@@ -2,19 +2,21 @@ import React, { useState, useEffect } from "react";
 import Grid from "./components/Grid/Grid";
 import findIsland from "./components/algorithm/findIsland";
 import Navbar from "./components/Navbar/Navbar";
-import "./App.css";
 import Header from "./components/Header/Header";
 import InstructionModal from "./components/InstructionModal/InstructionModal";
+import "./App.css";
 
 function App() {
   const isLand = [false, false, false, false, true];
+  const speedMultiplier = [2, 1, 0.5];
 
-  const [modalOpen, setModalOpen] = useState(true);
-  const [gridSize, setGridSize] = useState({ row: 25, col: 70 });
+  const [instructionModalOpen, setInstructionModalOpen] = useState(true);
+  const [gridSize, setGridSize] = useState({ row: 20, col: 60 });
   const [searchPoint, setSearchPoint] = useState({
     row: Math.floor(gridSize.row / 2),
     col: Math.floor(gridSize.col / 2),
   });
+  const [searchSpeed, setSearchSpeed] = useState(1); // 0:Slow, 1:Normal, 2:Fast
   const [searchPattern, setSearchPattern] = useState("BFS");
   const [grid, setGrid] = useState(gridInit(gridSize.row, gridSize.col));
   const [isMousePressed, setMousePressed] = useState(false);
@@ -82,6 +84,7 @@ function App() {
   function animateNodesVisited(nodesVisited) {
     setSearchState("SEARCHING");
     nodesVisited.map((node, iIndex) => {
+      // If the node is an array, it indicates a collection of island, else it is a water node
       if (Array.isArray(node)) {
         return node.map((landNode, jIndex) => {
           const updatedGrid = [...grid];
@@ -92,7 +95,7 @@ function App() {
               isAnimate: true,
             };
             setGrid(updatedGrid);
-          }, 5 * iIndex + 20 * jIndex);
+          }, (10 * iIndex + 40 * jIndex) * speedMultiplier[searchSpeed]);
         });
       } else {
         const updatedGrid = [...grid];
@@ -104,12 +107,12 @@ function App() {
             isAnimate: true,
           };
           setGrid(updatedGrid);
-        }, 5 * iIndex);
+        }, 10 * iIndex * speedMultiplier[searchSpeed]);
       }
     });
     setTimeout(
       () => animateIslandFound(nodesVisited),
-      nodesVisited.length * 5 + 2000
+      (nodesVisited.length * 10 + 2000) * speedMultiplier[searchSpeed]
     );
   }
 
@@ -127,7 +130,7 @@ function App() {
         });
         setGrid(updatedGrid);
         setIslandCount((currCount) => currCount + 1);
-      }, 500 * islandIndex);
+      }, 500 * islandIndex * speedMultiplier[searchSpeed]);
     });
     setTimeout(() => setSearchState("END"), 500 * islands.length + 500);
   }
@@ -181,14 +184,14 @@ function App() {
   }
 
   function handleMouseDown(node) {
-    if (modalOpen) return;
+    if (instructionModalOpen) return;
     if (node.isSearchPoint) setDragSearchPoint(true);
     else setGrid((prevGrid) => updateNodePressed(prevGrid, node));
     setMousePressed(true);
   }
 
   function handleMouseEnter(node) {
-    if (!isMousePressed || modalOpen) return;
+    if (!isMousePressed || instructionModalOpen) return;
     if (dragSearchPoint) setSearchPoint({ row: node.row, col: node.col });
     else setGrid((prevGrid) => updateNodePressed(prevGrid, node));
   }
@@ -201,13 +204,15 @@ function App() {
   return (
     <>
       <Navbar
-        modalOpen={modalOpen}
+        instructionModalOpen={instructionModalOpen}
         searchState={searchState}
         setSearchState={setSearchState}
         gridSize={gridSize}
         setGridSize={setGridSize}
         searchPattern={searchPattern}
         setSearchPattern={setSearchPattern}
+        searchSpeed={searchSpeed}
+        setSearchSpeed={setSearchSpeed}
         visualiseIslandFinder={visualiseIslandFinder}
         generateRandomLand={generateRandomLand}
         clearBoard={clearBoard}
@@ -224,7 +229,9 @@ function App() {
         onMouseUp={handleMouseUp}
         onMouseEnter={handleMouseEnter}
       />
-      {modalOpen && <InstructionModal setModalOpen={setModalOpen} />}
+      {instructionModalOpen && (
+        <InstructionModal setInstructionModalOpen={setInstructionModalOpen} />
+      )}
     </>
   );
 }

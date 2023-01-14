@@ -48,3 +48,15 @@
   color: rgb(224, 235, 235);
   transition: all 0.3s ease-out;
 }
+
+
+@media only screen and (max-width: 1440px) {
+  /* For Laptop */
+  .btn-nav {   
+    font-size: 1rem;
+    padding: 6px 20px;
+    margin: auto 6px;
+    width: 150px;
+    height: 45px;
+  }
+}

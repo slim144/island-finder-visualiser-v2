@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 
-.dropdown-menu.clicked {
+.dropdown-menu.close {
   display: none;
 }
 
@@ -42,4 +42,20 @@
 
 .dropdown-link.active {
   color: rgb(35, 49, 66);
+  background-color: transparent;
+  cursor: default;
+}
+
+
+@media only screen and (max-width: 1440px) {
+  /* For Laptop */
+  .dropdown-menu { 
+    top:65px;
+    min-width: 100px;
+  }
+  
+  .dropdown-link {
+    font-size: 0.9rem;
+  }
+  
 }

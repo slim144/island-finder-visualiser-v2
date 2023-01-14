@@ -11,8 +11,8 @@
 
 .node-grid {
   border: 1px solid rgb(69, 93, 122);
-  width: calc(95vw / 70);
-  height: calc(95vw / 70);
+  width: calc(95vw / 60);
+  height: calc(95vw / 60);
   padding: 0;
 }
 
@@ -112,5 +112,13 @@
   100% {
     transform: scale(1);
     background-color: transparent;
+  }
+}
+
+
+@media screen and (max-width: 1440px) {
+  .node-grid {
+    width: calc(100vw / 61);
+    height: calc(100vw / 61);
   }
 }

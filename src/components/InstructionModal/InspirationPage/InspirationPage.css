@@ -78,3 +78,44 @@
 .grid-example-water {
   background-color: rgba(0, 190, 218, 0.75);
 }
+
+
+@media only screen and (max-width: 1440px) {
+  /* For laptop */
+
+  .inspiration-page {
+    margin: 0 20px;
+  }
+
+  .inspiration-title {
+    margin-bottom: 20px;
+  }
+
+  .inspiration-title h1 {
+    font-size: 2rem;
+  }
+
+  .inspiration-title img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .inspiration-text {
+    font-size: 0.8125rem;
+  }
+
+  .problem {
+    margin: 10px 20px 20px;
+    font-size: 0.8125rem;
+  }
+
+  .problem-description {
+    margin-bottom: 5px;
+  }
+
+  .problem-graph {
+    gap: 1rem;
+  }
+
+}

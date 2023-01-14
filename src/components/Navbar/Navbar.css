@@ -20,19 +20,21 @@
 }
 
 .navbar-logo-img {
+  height: 30px;
+  width: 30px;
   align-items: center;
   margin: auto 5px;
 }
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(6, auto);
   gap: 10px;
   list-style: none;
   text-align: center;
   width: 70vw;
   justify-content: center;
-  margin-right: 180px;
+  margin-right: 100px;
 }
 
 .nav-item {
@@ -68,3 +70,46 @@
   border-radius: 6px;
   color: #fff;
 }
+
+.nav-link.speed {
+  text-align: start;
+  padding-right:0px;
+  min-width:150px;
+}
+
+@media only screen and (max-width: 1440px) {
+  /* For Laptop */
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar-logo {
+    font-size: 1.2rem;
+    width: 250px;
+  }
+  
+.navbar-logo-img {
+  width:25px;
+  height:25px;
+}
+
+.nav-menu {
+  gap: 5px;
+  margin-right: 80px;
+}
+
+.nav-item {
+  height:60px;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  padding: 0.6rem 0.8rem;
+}
+
+.nav-link.speed {
+  
+  min-width:120px;
+}
+}
+

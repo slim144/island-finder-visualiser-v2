@@ -4,30 +4,27 @@ function Page6() {
   return (
     <>
       <div className="tutorial-title">
-        <h1>Land Node</h1>
+        <h1>Search Speed</h1>
       </div>
       <div className="tutorial-text">
-        By default, the grid will be filled with water node, i.e. there will be
-        no land.
+        You may change the visualiser's speed by clicking{" "}
+        <button className="change-speed-label">Speed</button> on the Navigation
+        Bar.
       </div>
       <div className="tutorial-text">
-        To set the land, you may click on the node or click-and-drag around on
-        the given grid.
+        The default speed is <b>Normal</b>. On each toggle, the speed will
+        rotate in a cycle from Normal to Fast to Slow and back to Normal.
       </div>
-      <div className="land-gif-container">
-        <img src="../images/landclick.gif" alt="land click gif" />
-        <img src="../images/landdrag.gif" alt="land drag gif" />
-      </div>
-      <div className="tutorial-text">
-        Or simply click{" "}
-        <button className="generate-random-land-label">
-          Generate Random Land
-        </button>{" "}
-        on the Navigation Bar to randomise the nodes between land and water.
-      </div>{" "}
+
+      <img
+        className="search-speed-gif"
+        src="../images/searchspeed.gif"
+        alt="search speed gif"
+      />
       <div className="tutorial-text">
         <i>
-          TLDR: For each node, the chances for the land node to appear is 20%.
+          TLDR: The "Slow" speed is half the time of "Normal" speed while the
+          "Fast" speed is twice the time of "Normal" speed.
         </i>
       </div>
     </>

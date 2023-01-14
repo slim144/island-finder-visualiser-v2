@@ -5,16 +5,20 @@ import Dropdown from "./Dropdown";
 import "./Navbar.css";
 
 function Navbar({
-  modalOpen,
+  instructionModalOpen,
   searchState,
   gridSize,
   setGridSize,
   searchPattern,
   setSearchPattern,
+  searchSpeed,
+  setSearchSpeed,
   visualiseIslandFinder,
   generateRandomLand,
   clearBoard,
 }) {
+  const speed = ["Slow", "Normal", "Fast"];
+
   const [gridDropdown, setGridDropdown] = useState(false);
   const [searchDropdown, setSearchDropdown] = useState(false);
 
@@ -49,8 +53,6 @@ function Navbar({
           <img
             src="./images/navLogo.png"
             alt="Logo"
-            width="30"
-            height="30"
             className="navbar-logo-img"
           />
           ISLAND FINDER
@@ -58,7 +60,7 @@ function Navbar({
         <ul className="nav-menu">
           <li ref={gridRef} className="nav-item">
             <button
-              disabled={searchState !== "START" || modalOpen}
+              disabled={searchState !== "START" || instructionModalOpen}
               className={gridDropdown ? "nav-link active" : "nav-link"}
               onClick={() => {
                 setGridDropdown(!gridDropdown);
@@ -68,12 +70,16 @@ function Navbar({
               Grid Size <i className="fa-solid fa-caret-down"></i>
             </button>
             {gridDropdown && (
-              <Dropdown gridSize={gridSize} setGridSize={setGridSize} />
+              <Dropdown
+                gridSize={gridSize}
+                setGridSize={setGridSize}
+                setGridDropdown={setGridDropdown}
+              />
             )}
           </li>
           <li ref={searchRef} className="nav-item">
             <button
-              disabled={searchState !== "START" || modalOpen}
+              disabled={searchState !== "START" || instructionModalOpen}
               className={searchDropdown ? "nav-link active" : "nav-link"}
               onClick={() => {
                 setSearchDropdown(!searchDropdown);
@@ -86,12 +92,13 @@ function Navbar({
               <Dropdown
                 searchPattern={searchPattern}
                 setSearchPattern={setSearchPattern}
+                setSearchDropdown={setSearchDropdown}
               />
             )}
           </li>
           <li className="nav-item">
             <Button
-              modalOpen={modalOpen}
+              instructionModalOpen={instructionModalOpen}
               searchState={searchState}
               onClick={() => {
                 if (searchState === "END") {
@@ -104,20 +111,29 @@ function Navbar({
           </li>
           <li className="nav-item">
             <button
-              disabled={searchState === "SEARCHING" || modalOpen}
-              className="nav-link"
-              onClick={() => generateRandomLand()}
+              disabled={searchState === "SEARCHING" || instructionModalOpen}
+              className="nav-link speed"
+              onClick={() => setSearchSpeed((currSpeed) => (currSpeed + 1) % 3)}
             >
-              Generate Random Land
+              Speed: <i>{speed[searchSpeed]}</i>
             </button>
           </li>
           <li className="nav-item">
             <button
-              disabled={searchState === "SEARCHING" || modalOpen}
+              disabled={searchState === "SEARCHING" || instructionModalOpen}
+              className="nav-link"
+              onClick={() => generateRandomLand()}
+            >
+              Randomised Land
+            </button>
+          </li>
+          <li className="nav-item">
+            <button
+              disabled={searchState === "SEARCHING" || instructionModalOpen}
               className="nav-link"
               onClick={() => clearBoard()}
             >
-              Clear Board
+              Clear Grid
             </button>
           </li>
         </ul>

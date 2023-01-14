@@ -4,27 +4,25 @@ function Page8() {
   return (
     <>
       <div className="tutorial-title">
-        <h1>End</h1>
+        <h1>Search Island</h1>
       </div>
       <div className="tutorial-text">
-        Once the visualiser has completed, you may choose to reset the grid by
-        clickling <button className="reset-label">Reset</button> at the middle
-        of the Navigation Bar or click{" "}
-        <button className="clear-board-label">Clear Board</button> at end of the
-        Navigation bar.
+        Once you have finishing setting up the <b>Grid Size</b>,{" "}
+        <b>Search Pattern</b>, <b>Search Point</b>, <b>Search Speed</b> and{" "}
+        <b>Land Nodes</b>, you may begin the visualiser by clicking{" "}
+        <button className="search-island-label">Search Island</button> located
+        at the middle of the Navigation Bar.
       </div>
-      <img className="reset-gif" src="../images/reset.gif" alt="reset gif" />
+
+      <img
+        className="search-island-gif"
+        src="../images/searchisland.gif"
+        alt="search island gif"
+      />
       <div className="tutorial-text">
         <i>
-          Note:{" "}
-          <button className="grid-size-label">
-            Grid Size <i className="fa-solid fa-caret-down" />
-          </button>{" "}
-          and{" "}
-          <button className="search-pattern-label">
-            Search Pattern <i className="fa-solid fa-caret-down" />
-          </button>{" "}
-          will be disabled until the grid is resetted.
+          Note: All the buttons and items on the navigation bar will be disabled
+          when the visualiser is in progress.
         </i>
       </div>
     </>

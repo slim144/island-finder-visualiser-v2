@@ -45,3 +45,42 @@
 .about-this-application {
   margin: 20px 0 10px;
 }
+
+@media only screen and (max-width: 1440px) {
+  /* For laptop */
+  .about-page {
+    margin: 0 20px;
+  }
+
+  .about-title {
+    margin-bottom: 20px;
+  }
+
+  .about-title h1 {
+    font-size: 2rem;
+  }
+
+
+  .about-title img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  .about-text {
+    font-size: 0.8125rem;
+  }
+
+  .add-margin {
+    margin-left: 15px;
+    margin-right: 5px;
+  }
+
+  .programming-language,
+  .data-structure-and-algorithm,
+  .responsiveness,
+  .about-this-application {
+    margin: 10px 0 10px;
+  }
+
+}

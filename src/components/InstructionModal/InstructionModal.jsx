@@ -6,7 +6,7 @@ import TutorialPage from "./TutorialPage/TutorialPage.jsx";
 
 import "./InstructionModal.css";
 
-function InstructionModal({ setModalOpen }) {
+function InstructionModal({ setInstructionModalOpen }) {
   const [hoverCloseBtn, setHoverCloseBtn] = useState(false);
   const [hoverBackBtn, setHoverBackBtn] = useState(false);
   const [mainPageOpen, setMainPageOpen] = useState(true);
@@ -52,70 +52,74 @@ function InstructionModal({ setModalOpen }) {
   };
 
   return (
-    <div className={"modal-container modal-main-page"}>
-      <div className="modal-buttons">
-        {!mainPageOpen && (
+    <div className="modal-container">
+      <div className={"modal-content modal-main-page"}>
+        <div className="modal-buttons">
+          {!mainPageOpen && (
+            <button
+              className={
+                hoverBackBtn ? "btn-modal btn-back hover" : "btn-modal btn-back"
+              }
+              onClick={() => {
+                setHoverBackBtn(false);
+                setMainPageOpen(true);
+                setInspirationPageOpen(false);
+                setAboutPageOpen(false);
+                setTutorialPageOpen(false);
+              }}
+              onMouseEnter={() => setHoverBackBtn(true)}
+              onMouseLeave={() => setHoverBackBtn(false)}
+            >
+              <i className="fa-solid fa-arrow-left"></i>
+              {hoverBackBtn && <p>Back</p>}
+            </button>
+          )}
+
           <button
             className={
-              hoverBackBtn ? "btn-modal btn-back hover" : "btn-modal btn-back"
+              hoverCloseBtn
+                ? "btn-modal btn-close hover"
+                : "btn-modal btn-close"
             }
-            onClick={() => {
-              setHoverBackBtn(false);
-              setMainPageOpen(true);
-              setInspirationPageOpen(false);
-              setAboutPageOpen(false);
-              setTutorialPageOpen(false);
-            }}
-            onMouseEnter={() => setHoverBackBtn(true)}
-            onMouseLeave={() => setHoverBackBtn(false)}
+            onClick={() => setInstructionModalOpen(false)}
+            onMouseEnter={() => setHoverCloseBtn(true)}
+            onMouseLeave={() => setHoverCloseBtn(false)}
           >
-            <i className="fa-solid fa-arrow-left"></i>
-            {hoverBackBtn && <p>Back</p>}
+            <i className="fa-solid fa-x"></i>
+            {hoverCloseBtn && <p>Close</p>}
           </button>
-        )}
-
-        <button
-          className={
-            hoverCloseBtn ? "btn-modal btn-close hover" : "btn-modal btn-close"
-          }
-          onClick={() => setModalOpen(false)}
-          onMouseEnter={() => setHoverCloseBtn(true)}
-          onMouseLeave={() => setHoverCloseBtn(false)}
-        >
-          <i className="fa-solid fa-x"></i>
-          {hoverCloseBtn && <p>Close</p>}
-        </button>
-      </div>
-
-      {mainPageOpen && (
-        <div className="main-page">
-          <div className="main-title">
-            <img
-              src="./images/navLogo.png"
-              alt="Logo"
-              className="main-page-logo"
-            />
-            Welcome to Island Finder
-          </div>
-          <h2 className="main-text">
-            Click on the items below to find out more...
-          </h2>
-          <div className="card-wrapper">
-            {mainPageItems.map((item, index) => (
-              <Card
-                key={index}
-                title={item.title}
-                description={item.description}
-                imgURL={item.imgURL}
-                onClick={handleCardClick}
-              />
-            ))}
-          </div>
         </div>
-      )}
-      {inspirationPageOpen && <InspirationPage />}
-      {aboutPageOpen && <AboutPage />}
-      {tutorialPageOpen && <TutorialPage />}
+
+        {mainPageOpen && (
+          <div className="main-page">
+            <div className="main-title">
+              <img
+                src="./images/navLogo.png"
+                alt="Logo"
+                className="main-page-logo"
+              />
+              Welcome to Island Finder
+            </div>
+            <h2 className="main-text">
+              Click on the items below to find out more...
+            </h2>
+            <div className="card-wrapper">
+              {mainPageItems.map((item, index) => (
+                <Card
+                  key={index}
+                  title={item.title}
+                  description={item.description}
+                  imgURL={item.imgURL}
+                  onClick={handleCardClick}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+        {inspirationPageOpen && <InspirationPage />}
+        {aboutPageOpen && <AboutPage />}
+        {tutorialPageOpen && <TutorialPage />}
+      </div>
     </div>
   );
 }

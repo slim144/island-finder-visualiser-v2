@@ -1,8 +1,8 @@
 import React from "react";
 import "./Button.css";
 
-function Button({ searchState, onClick, modalOpen }) {
-  const buttonClass = modalOpen
+function Button({ searchState, onClick, instructionModalOpen }) {
+  const buttonClass = instructionModalOpen
     ? "btn-disabled"
     : searchState === "START"
     ? "btn-default"
@@ -19,7 +19,7 @@ function Button({ searchState, onClick, modalOpen }) {
 
   return (
     <button
-      disabled={modalOpen}
+      disabled={instructionModalOpen}
       className={`btn-nav ${buttonClass}`}
       onClick={onClick}
     >

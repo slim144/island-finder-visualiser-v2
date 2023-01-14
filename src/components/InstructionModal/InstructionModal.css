@@ -1,11 +1,21 @@
 .modal-container {
+  width:100vw;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+  z-index:1;
+  background-color: rgba(0,0,0,0.5);
+}
+
+
+.modal-content {
   background-image: url(../../../public/images/modal-background.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   position: absolute;
   inset: 0;
   margin: auto;
@@ -160,22 +170,22 @@
 
   /*Close and Back Button*/
   .btn-modal {
-    height: 40px;
-    font-size: 1.29rem;
+    height: 35px;
+    font-size: 1rem;
   }
 
   .btn-modal p {
     line-height: 40px;
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   .btn-modal:hover {
-    width: 110px;
+    width: 85px;
   }
 
   .btn-back .fa-arrow-left,
   .btn-close .fa-x {
-    margin: auto 8px auto 0;
+    margin: auto 6px auto 0;
   }
 
   /* Main Page */
@@ -199,13 +209,13 @@
   }
 
   .card-img {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
     margin: 8px;
   }
 
   .card-title {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     color: rgb(35, 49, 66);
     margin: 8px;
   }
@@ -215,57 +225,4 @@
     padding: 5px;
   }
 
-  /* Inspiration Page, About Page, Tutorial Page */
-
-  .inspiration-page,
-  .about-page,
-  .tutorial-page {
-    margin: 0 20px;
-  }
-
-  .inspiration-title h1,
-  .about-title h1,
-  .tutorial-title h1 {
-    font-size: 2rem;
-  }
-
-  .inspiration-title img,
-  .about-title img,
-  .tutorial-title img {
-    height: 60px;
-    width: 60px;
-  }
-
-  .inspiration-text,
-  .about-text,
-  .tutorial-text {
-    font-size: 0.8125rem;
-  }
-
-  .problem {
-    margin: 10px 20px 20px;
-    font-size: 0.8125rem;
-  }
-
-  .problem-description {
-    margin-bottom: 5px;
-  }
-
-  .problem-graph {
-    gap: 1rem;
-  }
-
-  .add-margin {
-    margin-left: 15px;
-    margin-right: 5px;
-  }
-
-  .about-this-application {
-    margin: 20px 0 10px;
-  }
-
-  .about-this-application-title {
-    font-size: 1.2rem;
-    text-decoration: underline;
-  }
 }

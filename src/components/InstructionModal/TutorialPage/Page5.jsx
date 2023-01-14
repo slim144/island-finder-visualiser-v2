@@ -11,7 +11,6 @@ function Page5() {
         click-and-drag the{" "}
         <img
           className="searchpoint-img"
-          height={25}
           src="../images/binoculars.svg"
           alt="binocular img"
         />{" "}
@@ -19,7 +18,6 @@ function Page5() {
       </div>
       <img
         className="searchpoint-gif"
-        height={250}
         src="../images/searchpoint.gif"
         alt="searchpoint gif"
       />

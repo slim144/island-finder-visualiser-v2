@@ -11,7 +11,7 @@ function Page3() {
         <button className="search-pattern-label">
           Search Pattern <i className="fa-solid fa-caret-down" />
         </button>{" "}
-        on the Navigation Bar to choose the type of search alogrithm that you
+        on the Navigation Bar to choose the type of search algorithm that you
         want. A drop-down list will appear showing 4 types of search pattern.
         <i>
           {" "}
@@ -26,12 +26,14 @@ function Page3() {
         colored in <b className="color-label">dark blue</b>.
       </div>
       <div className="tutorial-text">
-        By default, the search pattern is set to Breadth First Seach. To change
-        it, click on any other item in the drop-down list.
+        By default, the search pattern is set to <b>Breadth First Search</b>. To
+        change it, click on any other item in the drop-down list.
       </div>
-      <div className="searchpattern-img">
-        <img src="../images/searchpattern.PNG" alt="grid size png" />
-      </div>
+      <img
+        className="searchpattern-img"
+        src="../images/searchpattern.PNG"
+        alt="grid size png"
+      />
     </>
   );
 }

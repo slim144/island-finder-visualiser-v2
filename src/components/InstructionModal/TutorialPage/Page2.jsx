@@ -13,7 +13,7 @@ function Page2() {
         </button>{" "}
         on the Navigation Bar. A drop-down list will appear with the different
         grid size options. They are represented in rows by columns.{" "}
-        <i> e.g. 25 x 70 will represent 20 rows and 70 columns.</i>
+        <i> e.g. 20 x 60 will represent 20 rows and 60 columns.</i>
       </div>
       <div className="tutorial-text">
         The current (active) grid size will be colored in{" "}
@@ -21,12 +21,15 @@ function Page2() {
       </div>
       <div className="tutorial-text">
         By default, the grid size is set to{" "}
-        <b className="color-label">25 x 70</b>. Click on any other item in the
+        <b className="color-label">20 x 60</b>. Click on any other item in the
         drop-down list to change the grid size.
       </div>
-      <div className="gridsize-img">
-        <img src="../images/gridsize.PNG" alt="grid size png" />
-      </div>
+
+      <img
+        className="gridsize-img"
+        src="../images/gridsize.PNG"
+        alt="grid size png"
+      />
     </>
   );
 }

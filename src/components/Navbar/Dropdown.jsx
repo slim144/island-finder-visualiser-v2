@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Dropdown.css";
 
-function Dropdown({ gridSize, setGridSize, searchPattern, setSearchPattern }) {
-  const [close, setClose] = useState(false);
+function Dropdown({
+  gridSize,
+  setGridSize,
+  setGridDropdown,
 
+  searchPattern,
+  setSearchPattern,
+  setSearchDropdown,
+}) {
   const gridSizes = [
     { row: 5, col: 10 },
     { row: 10, col: 10 },
-    { row: 20, col: 20 },
-    { row: 20, col: 50 },
-    { row: 25, col: 60 },
-    { row: 25, col: 70 },
+    { row: 10, col: 20 },
+    { row: 15, col: 30 },
+    { row: 20, col: 40 },
+    { row: 20, col: 60 },
   ];
 
   const searchPatterns = {
@@ -23,14 +29,17 @@ function Dropdown({ gridSize, setGridSize, searchPattern, setSearchPattern }) {
   return (
     <>
       {gridSize ? (
-        <ul className={close ? "dropdown-menu close" : "dropdown-menu"}>
+        <ul className="dropdown-menu">
           {gridSizes.map((size, index) => (
-            <li key={index} onClick={() => setClose(false)}>
+            <li key={index} onClick={() => setGridDropdown(false)}>
               <button
                 className={
                   gridSize.row === size.row && gridSize.col === size.col
                     ? "dropdown-link active"
                     : "dropdown-link"
+                }
+                disabled={
+                  gridSize.row === size.row && gridSize.col === size.col
                 }
                 onClick={() => setGridSize({ row: size.row, col: size.col })}
               >
@@ -40,15 +49,16 @@ function Dropdown({ gridSize, setGridSize, searchPattern, setSearchPattern }) {
           ))}
         </ul>
       ) : (
-        <ul className={close ? "dropdown-menu close" : "dropdown-menu"}>
+        <ul className="dropdown-menu">
           {Object.keys(searchPatterns).map((key, index) => (
-            <li key={index} onClick={() => setClose(false)}>
+            <li key={index} onClick={() => setSearchDropdown(false)}>
               <button
                 className={
                   searchPattern === key
                     ? "dropdown-link active"
                     : "dropdown-link"
                 }
+                disabled={searchPattern === key}
                 onClick={() => setSearchPattern(key)}
               >
                 {searchPatterns[key]}

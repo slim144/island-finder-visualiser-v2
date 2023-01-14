@@ -4,25 +4,36 @@ function Page7() {
   return (
     <>
       <div className="tutorial-title">
-        <h1>Search Island</h1>
+        <h1>Land Node</h1>
       </div>
       <div className="tutorial-text">
-        Once you have finishing setting up the <b>Grid Size</b>,{" "}
-        <b>Search Pattern</b>, <b>Search Point</b> and <b>Land Nodes</b>, you
-        may begin the visualiser by clicking{" "}
-        <button className="search-island-label">Search Island</button> located
-        at the middle of the Navigation Bar.
+        By default, the grid will be filled with water node, i.e. there will be
+        no land.
       </div>
-
-      <img
-        className="search-island-gif"
-        src="../images/searchisland.gif"
-        alt="search island gif"
-      />
+      <div className="tutorial-text">
+        To set the land, you may click on the node or click-and-drag around on
+        the given grid.
+      </div>
+      <div className="land-gif-container">
+        <img
+          className="land-gif"
+          src="../images/landclick.gif"
+          alt="land click gif"
+        />
+        <img
+          className="land-gif"
+          src="../images/landdrag.gif"
+          alt="land drag gif"
+        />
+      </div>
+      <div className="tutorial-text">
+        Or simply click{" "}
+        <button className="generate-random-land-label">Randomised Land</button>{" "}
+        on the Navigation Bar to randomise the nodes between land and water.
+      </div>{" "}
       <div className="tutorial-text">
         <i>
-          Note: All the buttons and items on the navigation bar will be disabled
-          when the visualiser is in progress.
+          TLDR: For each node, the chances for the land node to appear is 20%.
         </i>
       </div>
     </>
