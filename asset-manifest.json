@@ -1,15 +1,25 @@
 {
   "files": {
     "main.css": "/island-finder-visualiser-v2/static/css/main.bb44ff35.css",
-    "main.js": "/island-finder-visualiser-v2/static/js/main.c675236a.js",
+    "main.js": "/island-finder-visualiser-v2/static/js/main.39461571.js",
     "static/media/modal-background.jpg": "/island-finder-visualiser-v2/static/media/modal-background.e06fe96bba61166501a9.jpg",
-    "static/media/binoculars.svg": "/island-finder-visualiser-v2/static/media/binoculars.7ab5c1941953e6bd5eea.svg",
+    "static/media/reset.gif": "/island-finder-visualiser-v2/static/media/reset.44361b3e59182a8a6cd7.gif",
+    "static/media/searchpoint.gif": "/island-finder-visualiser-v2/static/media/searchpoint.8eb9ed1940745b822105.gif",
+    "static/media/searchisland.gif": "/island-finder-visualiser-v2/static/media/searchisland.d84cc902c2588aa1d9cd.gif",
+    "static/media/searchspeed.gif": "/island-finder-visualiser-v2/static/media/searchspeed.2a39946df3861fb89075.gif",
+    "static/media/navLogo.png": "/island-finder-visualiser-v2/static/media/navLogo.299f14af77dacb007f09.png",
+    "static/media/searchpattern.PNG": "/island-finder-visualiser-v2/static/media/searchpattern.c37d86d7795489e78f0b.PNG",
+    "static/media/gridsize.PNG": "/island-finder-visualiser-v2/static/media/gridsize.b3c9c8320c627f64ab7e.PNG",
+    "static/media/tutorial.svg": "/island-finder-visualiser-v2/static/media/tutorial.d1b0a13ff50bd73926f5bd58f76276af.svg",
+    "static/media/binoculars.svg": "/island-finder-visualiser-v2/static/media/binoculars.7ab5c1941953e6bd5eea60df90e43d05.svg",
+    "static/media/inspiration.svg": "/island-finder-visualiser-v2/static/media/inspiration.f00ec4650f08137ebef8eb26710b23cf.svg",
     "index.html": "/island-finder-visualiser-v2/index.html",
+    "static/media/about.svg": "/island-finder-visualiser-v2/static/media/about.f5b095923308c6cab83be99041a1c01e.svg",
     "main.bb44ff35.css.map": "/island-finder-visualiser-v2/static/css/main.bb44ff35.css.map",
-    "main.c675236a.js.map": "/island-finder-visualiser-v2/static/js/main.c675236a.js.map"
+    "main.39461571.js.map": "/island-finder-visualiser-v2/static/js/main.39461571.js.map"
   },
   "entrypoints": [
     "static/css/main.bb44ff35.css",
-    "static/js/main.c675236a.js"
+    "static/js/main.39461571.js"
   ]
 }
